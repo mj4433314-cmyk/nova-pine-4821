@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>NightDistrict · صناعة الألعاب من فريق OPTES على Unreal Engine 5</title>
+<meta name="description" content="NightDistrict: كورنيشُ مدينةٍ عربية على البحر، بناه فريق OPTES على Unreal Engine 5. فيلمٌ افتتاحي بدقة 4K، ولعبةٌ تجوب فيها المدينة ماشياً أو بالسيارة، ولقطاتٌ من داخل المحرّك.">
+<link rel="canonical" href="index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OPTES">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="NightDistrict · صناعة الألعاب من فريق OPTES على Unreal Engine 5">
+<meta property="og:description" content="NightDistrict: كورنيشُ مدينةٍ عربية على البحر، بناه فريق OPTES على Unreal Engine 5. فيلمٌ افتتاحي بدقة 4K، ولعبةٌ تجوب فيها المدينة ماشياً أو بالسيارة، ولقطاتٌ من داخل المحرّك.">
+<meta property="og:url" content="https://optes3.com/game/">
+<meta property="og:image" content="https://optes3.com/game/media/shot-1.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="منظرٌ جوي للكورنيش والبحر والجامع في NightDistrict">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+
+<link rel="stylesheet" href="../assets/optes-tokens.css%3Fv=325d9c0a62.css" data-ux>
+<link rel="stylesheet" href="../assets/fonts/f1.css%3Fv=20261107.css">
+<link rel="stylesheet" href="../assets/site.css%3Fv=20261015r1602.css">
+<style>
+.phead{padding-block:clamp(64px,9vw,128px) 0;text-align:center}
+.phead h1{margin-top:14px;font:500 clamp(48px,8vw,112px)/1 var(--lat);letter-spacing:-.02em;direction:ltr}
+.phead .lead{max-width:640px;margin:24px auto 0;color:var(--ink2);font-size:17px}
+.phead .row{margin-top:32px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.hero{position:relative;margin-top:clamp(48px,6vw,80px);aspect-ratio:16/9;border-radius:var(--rl);overflow:hidden;background:#0a0a0a;isolation:isolate}
+.hero img,.hero video{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover}
+.hero video{opacity:0;transition:opacity 1s var(--ease)}
+.hero video.on{opacity:1}
+.hero .tags{position:absolute;z-index:2;inset-block-end:16px;inset-inline-start:16px;display:flex;gap:8px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:13px;color:var(--ink)}
+.head{display:flex;flex-direction:column;gap:12px;max-width:720px;margin-bottom:32px}
+.head h2{font:500 clamp(26px,3vw,40px)/1.25 var(--ar)}
+.head p{color:var(--ink2)}
+.player{border-radius:var(--rl);overflow:hidden;background:#000}
+.player video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
+.fact{padding:24px;border-radius:var(--r);background:var(--s1);border:1px solid var(--rule);display:flex;flex-direction:column;gap:8px}
+.fact b{font:300 clamp(28px,3vw,40px)/1.1 var(--lat);font-variant-numeric:tabular-nums;direction:ltr;text-align:right}
+.fact span{color:var(--ink2);font-size:14px}
+.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.shot{position:relative;border-radius:var(--r);overflow:hidden;border:0;cursor:zoom-in;background:var(--s2);padding:0;font:inherit;color:inherit}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform var(--slow) var(--ease)}
+.shot:hover img{transform:scale(1.025)}
+.shot span{position:absolute;inset-inline:0;bottom:0;padding:14px 16px;font-size:14px;color:var(--ink);background:linear-gradient(0deg,rgba(0,0,0,.8),transparent);text-align:start}
+.g1{grid-column:span 8;aspect-ratio:16/9}.g2{grid-column:span 4}.g3,.g4,.g5{grid-column:span 4;aspect-ratio:16/10}.g6,.g7{grid-column:span 6;aspect-ratio:16/9}.g8{grid-column:span 12;aspect-ratio:21/9}
+.feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.f{min-height:220px;padding:28px;border-radius:var(--r);background:var(--s1);border:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.f h3{font:500 20px/1.4 var(--ar)}
+.f p{color:var(--ink2);font-size:15px}
+.credits{margin-top:clamp(64px,8vw,96px);padding-top:24px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--ink3)}
+.box{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.94);display:grid;place-items:center;padding:24px}
+.box img{max-width:100%;max-height:86vh;border-radius:var(--r)}
+.box button{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));inset-inline-start:16px}
+@media (max-width:900px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.feat{grid-template-columns:minmax(0,1fr)}.f{min-height:0}}
+@media (max-width:760px){.gallery>*{grid-column:span 12!important;aspect-ratio:16/9!important}}
+@media (max-width:600px){
+  .phead{text-align:start}.phead .lead{margin-inline:0}.phead .row{justify-content:flex-start}.phead .row .btn{flex:1}
+  .phead h1{font-size:clamp(40px,13vw,64px);text-align:right}
+  .hero{aspect-ratio:4/5;border-radius:var(--r)}
+  .fact{padding:18px}
+}
+</style>
+<link rel="stylesheet" href="../assets/redesign.css%3Fv=20261013a.css">
+<link rel="stylesheet" href="../assets/sections.css%3Fv=20261013b.css">
+<link rel="stylesheet" href="../assets/liquid.css%3Fv=20261107v2h.css">
+<link rel="stylesheet" href="../assets/vqa.css%3Fv=213d7658f3.css">
+<link rel="stylesheet" href="../assets/ux-bind.css%3Fv=bdd71f35fb.css" data-ux>
+</head>
+<body>
+<a class="skip" href="index.html#main">تخطَّ إلى المحتوى</a>
+<header class="sn"><div class="wrap in">
+  <a class="sn-logo" href="../index.html" aria-label="OPTES، الصفحة الأولى">OPTES</a>
+  <nav aria-label="الأقسام"><ul class="sn-links"><li><a href="../plans/index.html">الباقات</a></li>
+    <li><a href="../cloud/index.html" data-oxnav>OPTES Cloud</a></li>
+    <li><a href="../index.html#research">استكشف</a></li>
+    <li><a href="../index.html#products">المنتجات</a></li>
+    <li><a href="../developers/index.html">المطوّرون</a></li>
+    <li><a href="../guide/index.html">المساعدة</a></li>
+    <li><a href="../index.html#safety">الأمان</a></li>
+    <li><a href="../about/index.html">الشركة</a></li>
+  </ul></nav>
+  <details class="sn-lang" data-lang-menu><summary aria-label="اختر اللغة: العربية"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 3.9 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.7 5.4 8s.8 4.3 2.6 6.2"/></svg><span class="ln">العربية</span><span class="lc">AR</span></summary><ul class="sn-langs"><li><a href="index.html" hreflang="ar" lang="ar" aria-current="true">العربية</a></li><li><a href="../en/index.html" hreflang="en" lang="en">English</a></li><li><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/index.html" hreflang="es" lang="es">Español</a></li><li><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../it/index.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../pt/index.html" hreflang="pt" lang="pt">Português</a></li><li><a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../fa/index.html" hreflang="fa" lang="fa">فارسی</a></li><li><a href="../ur/index.html" hreflang="ur" lang="ur">اردو</a></li><li><a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../zh/index.html" hreflang="zh-Hans" lang="zh">中文</a></li><li><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a></li></ul></details>
+  <div class="sn-end">
+    <a class="btn sm" href="../index.html#launch">التنزيل</a>
+    <a class="btn sm light" href="https://web.optes3.com/app/" rel="noopener">سجّل دخول</a>
+  </div>
+  <button type="button" class="sn-menu-btn" aria-expanded="false" aria-controls="sn-menu" aria-label="القائمة" data-l-open="القائمة" data-l-close="إغلاق القائمة"><i></i><i></i></button>
+</div></header>
+<div class="sn-menu" id="sn-menu" aria-hidden="true">
+  <nav aria-label="القائمة"><a href="../plans/index.html">الباقات</a>
+    <a href="../cloud/index.html" data-oxnav>OPTES Cloud</a>
+    <a href="../index.html#research">استكشف</a>
+    <a href="../index.html#products">المنتجات</a>
+    <a href="../developers/index.html">المطوّرون</a>
+    <a href="../guide/index.html">المساعدة</a>
+    <a href="../index.html#safety">الأمان</a>
+    <a href="../about/index.html">الشركة</a>
+  </nav>
+  <div class="acts">
+    <a class="btn light" href="https://web.optes3.com/app/" rel="noopener">سجّل دخول</a>
+    <a class="btn" href="../index.html#launch">التنزيل</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="wrap phead">
+  <p class="eyebrow">صناعة الألعاب · من أعمال فريق <span class="lat">OPTES</span></p>
+  <h1>NightDistrict</h1>
+  <p class="lead">كورنيشُ مدينةٍ عربية على البحر: شارعٌ تصطفّ النخيل على جانبيه، وأبراج، وجامعٌ على جزيرة، ومارّةٌ وسياراتٌ في الطرقات. فيلمٌ افتتاحي بدقة <span class="lat">4K</span>، ولعبةٌ تجوب فيها المدينة ماشياً أو بالسيارة.</p>
+  <div class="row"><a class="btn light" href="index.html#film">شاهد الفيلم</a><a class="btn" href="index.html#shots">لقطات من المدينة</a></div>
+  <div class="hero">
+    <img src="media/poster-960.webp" srcset="media/poster-960.webp 960w, media/shot-1.jpg 1600w" sizes="(max-width:1440px) 100vw, 1376px" alt="" width="960" height="540" fetchpriority="high">
+    <video muted loop playsinline preload="none" aria-hidden="true" data-src="media/trailer.mp4"></video>
+    <div class="tags"><span class="tag"><span class="lat">Unreal Engine 5</span></span><span class="tag">فيلم ولعبة</span></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="film">
+  <div class="head rv"><p class="eyebrow">الفيلم</p><h2>الفيلم الافتتاحي</h2><p>لقطاتٌ متصلة بكاميرا سينمائية، من فوق البحر إلى قلب الشارع، ثم إلى اللعبة نفسها. شغّل الصوت.</p></div>
+  <div class="player rv"><video id="film-v" controls playsinline preload="none" poster="media/poster-960.webp" data-src="media/trailer.mp4" data-src-mobile="media/trailer-720.mp4"></video></div>
+  <div class="facts">
+    <div class="fact rv"><b>2,165</b><span>بنايةً في المدينة</span></div>
+    <div class="fact rv"><b>98</b><span>شخصاً في الشارع</span></div>
+    <div class="fact rv"><b>4K</b><span>دقة الفيلم الأصلي</span></div>
+    <div class="fact rv"><b>UE 5</b><span>بإضاءة <span class="lat">Lumen</span> ومجسّمات <span class="lat">Nanite</span></span></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="shots">
+  <div class="head rv"><p class="eyebrow">لقطات</p><h2>لقطاتٌ من المدينة</h2><p>كل لقطةٍ مرسومة داخل المحرّك نفسه بضوء الشمس فيه، دون أي تعديلٍ بعدها. انقر أي صورةٍ لتكبيرها.</p></div>
+  <div class="gallery">
+    <button class="shot g1" data-full="media/shot-1.jpg"><img src="media/shot-1-800.webp" srcset="media/shot-1-800.webp 800w, media/shot-1.jpg 1600w" sizes="(max-width:760px) 100vw, 66vw" alt="منظرٌ جوي للكورنيش والبحر والجامع" width="800" height="450" loading="lazy" decoding="async"><span>الكورنيش من فوق: البحر والجامع والأبراج</span></button>
+    <button class="shot g2" data-full="media/shot-6.jpg"><img src="media/shot-6-800.webp" srcset="media/shot-6-800.webp 800w, media/shot-6.jpg 1600w" sizes="(max-width:760px) 100vw, 33vw" alt="الشارع من الأعلى بالنخيل والسيارات" width="800" height="450" loading="lazy" decoding="async"><span>الشارع من الأعلى</span></button>
+    <button class="shot g3" data-full="media/shot-2.jpg"><img src="media/shot-2-800.webp" srcset="media/shot-2-800.webp 800w, media/shot-2.jpg 1600w" sizes="(max-width:760px) 100vw, 33vw" alt="شارعٌ بالنخيل وإشارات المرور" width="800" height="450" loading="lazy" decoding="async"><span>ممرّ النخيل</span></button>
+    <button class="shot g4" data-full="media/shot-3.jpg"><img src="media/shot-3-800.webp" srcset="media/shot-3-800.webp 800w, media/shot-3.jpg 1600w" sizes="(max-width:760px) 100vw, 33vw" alt="الشخصية تعبر الشارع" width="800" height="450" loading="lazy" decoding="async"><span>عبور الشارع</span></button>
+    <button class="shot g5" data-full="media/shot-4.jpg"><img src="media/shot-4-800.webp" srcset="media/shot-4-800.webp 800w, media/shot-4.jpg 1600w" sizes="(max-width:760px) 100vw, 33vw" alt="الشخصية تمشي بين السيارات" width="800" height="450" loading="lazy" decoding="async"><span>بين السيارات</span></button>
+    <button class="shot g6" data-full="media/shot-5.jpg"><img src="media/shot-5-800.webp" srcset="media/shot-5-800.webp 800w, media/shot-5.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" alt="سيارةٌ تسير في الشارع" width="800" height="450" loading="lazy" decoding="async"><span>القيادة</span></button>
+    <button class="shot g7" data-full="media/shot-7.jpg"><img src="media/shot-7-800.webp" srcset="media/shot-7-800.webp 800w, media/shot-7.jpg 1600w" sizes="(max-width:760px) 100vw, 50vw" alt="لقطةٌ من وضع القيادة في اللعبة" width="800" height="450" loading="lazy" decoding="async"><span>داخل اللعبة: وضع القيادة</span></button>
+    <button class="shot g8" data-full="media/shot-8.jpg"><img src="media/shot-8-800.webp" srcset="media/shot-8-800.webp 800w, media/shot-8.jpg 1600w" sizes="100vw" alt="الشخصية عند تقاطعٍ على الكورنيش" width="800" height="450" loading="lazy" decoding="async"><span>على الكورنيش</span></button>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="head rv"><p class="eyebrow">كيف صُنع</p><h2>من وصفٍ إلى مدينة</h2><p>بدأ المشروع بمقطعٍ قصير من هاتف ووصفٍ بالكلام، ثم بناه فريق <span class="lat">OPTES</span> داخل المحرّك خطوةً بعد خطوة، مستعيناً بأدوات المساعدة.</p></div>
+  <div class="feat">
+    <div class="f rv"><h3>مدينةٌ كاملة</h3><p>أكثر من ألفي بناية موزّعة على كورنيشٍ وأحياءٍ وجزيرةٍ بجامع، مع شوارع وأرصفة ونخيل.</p></div>
+    <div class="f rv"><h3>مارّةٌ يتحرّكون</h3><p>عشرات المشاة يمشون في مساراتٍ محسوبة، يعبرون الإشارات ويقفون ويتحدّثون بالهاتف.</p></div>
+    <div class="f rv"><h3>نهارٌ صيفي</h3><p>شمسٌ بزاويةٍ حقيقية، وتعريضٌ ضوئي مضبوط على صورٍ مرجعية، وانعكاساتٌ على الماء.</p></div>
+    <div class="f rv"><h3>ماشياً أو بالسيارة</h3><p>وضعُ مشيٍ بالشخصية في الشارع، ووضعُ قيادةٍ بسيارةٍ على طول الكورنيش.</p></div>
+    <div class="f rv"><h3>فيلمٌ سينمائي</h3><p>مشهدٌ افتتاحي بكاميرا متصلة وموسيقى وصوت، مُصدَّرٌ بدقة <span class="lat">4K</span>.</p></div>
+    <div class="f rv"><h3>أصولٌ مرخّصة</h3><p>النماذج والخامات كلها من مصادر مجانية مرخّصة، ولا تحمل شعار أي علامة تجارية.</p></div>
+  </div>
+  <div class="credits">
+    <span>الشخصية الرئيسية: <span class="lat">"Sound Guy"</span> — <span class="lat">Tony Flanagan</span>، <span class="lat">CC BY 4.0</span></span>
+    <span class="lat">Unreal® is a trademark of Epic Games, Inc.</span>
+  </div>
+</section>
+</main>
+
+<footer class="sf"><div class="wrap">
+  <div class="sf-cols">
+    <div><h4>استكشف</h4><ul><li><a href="../galaxy/index.html">درب التبّانة</a></li><li><a href="../galaxy/index.html#hero-bh">الثقب الأسود</a></li><li><a href="../index.html#research">تجارب مرئية</a></li></ul></div>
+    <div><h4>المنتجات</h4><ul><li><a href="../index.html#capabilities">قدرات <span class="lat">OPTES 1.2</span></a></li><li><a href="index.html">صناعة الألعاب</a></li><li><a href="../for/index.html">لكل اختصاص</a></li><li><a href="../dialects/index.html">يفهم لهجتك</a></li><li><a href="../learn/index.html">تعرّف على أوبتس</a></li><li><a href="../index.html#products">استكشف المنتجات</a></li><li><a href="../plans/index.html">الباقات</a></li><li><a href="../guide/index.html">المساعدة</a></li><li><a href="../index.html#launch">التنزيل</a></li></ul></div>
+    <div><h4>المطوّرون</h4><ul><li><a href="../developers/index.html">نظرة عامة</a></li><li><a href="../developers/index.html#code">التوثيق</a></li><li><a href="../developers/index.html#code">مرجع الواجهة</a></li><li><a href="../developers/index.html#models">الأسعار</a></li><li><a href="https://accounts.optes3.com/account/api?view=keys&amp;lang=ar">المفاتيح</a></li></ul></div>
+    <div><h4>الأمان</h4><ul><li><a href="../index.html#safety">نهج الأمان</a></li><li><a href="../security/index.html">الإبلاغ عن ثغرة</a></li><li><a href="../privacy/index.html">الخصوصية</a></li><li><a href="../terms/index.html">شروط الاستخدام</a></li><li><a href="../delete-account/index.html">حذف الحساب</a></li><li><a href="../.well-known/security.txt"><span class="lat">security.txt</span></a></li></ul></div>
+    <div><h4>الشركة</h4><ul><li><a href="../about/index.html">عن <span class="lat">OPTES</span></a></li><li><a href="../donate/index.html">ادعم أوبتس</a></li><li><a href="mailto:support@optes3.com">راسل الدعم</a></li></ul></div>
+  </div>
+  <div class="sf-base">
+    <div class="who"><span class="lat">© 2026 OPTES</span><span>خريطة المجرّة: <span class="lat">NASA/JPL-Caltech/R. Hurt</span></span></div>
+    <nav class="sf-langs" aria-label="اللغات"><a href="../index.html" hreflang="ar" lang="ar" aria-current="true">العربية</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../pt/index.html" hreflang="pt" lang="pt">Português</a><a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../fa/index.html" hreflang="fa" lang="fa">فارسی</a><a href="../ur/index.html" hreflang="ur" lang="ur">اردو</a><a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../zh/index.html" hreflang="zh-Hans" lang="zh">中文</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a></nav>
+  </div>
+</div></footer>
+
+<script src="../assets/site.js%3Fv=20261015r1602" defer></script>
+<script src="game.js" defer></script>
+<script src="../assets/motion.js%3Fv=20261107v2h" defer></script><script src="../assets/liquid.js%3Fv=20261107lq5" defer></script><script src="../assets/liquid-v2.js%3Fv=20261107v2h" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5f32a3f1f3107b9',t:'MTc5NTQ2ODI3Mg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5f32a3f1f3107b9',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

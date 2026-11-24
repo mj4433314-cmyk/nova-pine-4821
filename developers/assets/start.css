@@ -1,0 +1,146 @@
+/* OPTES developers «ابدأ بـ3 خطوات / Start in 3 steps» (2026-11-13). Loaded after liquid.css on /developers/ and
+   /en/developers/ only. Black liquid glass from the --lq-* tokens (assets/liquid.css): glass panels with a light rim,
+   a specular sweep, slow CSS caustics, pearl primary button. Black / white / silver only. No library, no web font
+   beyond the site's own, no inline script. Reduced motion = no animation at all. Source: site-chrome/devstart-20261113/. */
+.ds{--ds-r:20px;--ds-r-sm:12px;--ds-gap:16px;--ds-ease:var(--lq-ease,cubic-bezier(.22,1,.36,1));
+  position:relative;isolation:isolate;overflow-x:clip;padding:clamp(28px,6vw,72px) 0 clamp(48px,8vw,96px)}
+.ds .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.ds a{color:inherit}
+.ds :focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:8px}
+
+/* water under the hero: a static silver pool, painted with the page (no canvas, no script). main::before stays the
+   site's own quiet sphere (liquid.css), so this sits on the hero. */
+.ds-hero{position:relative;isolation:isolate}
+.ds-hero::before{content:"";position:absolute;inset:-60px -20vw -40px;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(closest-side at 50% 40%,rgba(214,218,224,.12),transparent 75%),
+    radial-gradient(30% 40% at 78% 30%,rgba(255,255,255,.05),transparent 70%),
+    radial-gradient(34% 44% at 20% 60%,rgba(158,161,166,.06),transparent 70%)}
+
+/* ── hero ── */
+.ds-hero{text-align:center;max-width:760px;margin:0 auto clamp(28px,5vw,48px)}
+.ds-kick{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--lq-silver,#9ea1a6);font-size:14px;letter-spacing:.04em}
+.ds-kick::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--lq-sphere);box-shadow:0 0 10px rgba(255,255,255,.3)}
+.ds-hero h1{font-size:clamp(36px,7vw,64px);line-height:1.12;margin:0 0 14px;font-weight:600}
+.ds-hero p.ds-lead{margin:0 auto;max-width:600px;color:var(--ink2,#c4c7cb);font-size:clamp(16px,2.2vw,19px);line-height:1.7}
+.ds-base{display:inline-flex;align-items:center;gap:6px;margin-top:22px;padding:6px 6px 6px 14px;border-radius:999px;
+  background:var(--lq-glass);border:1px solid var(--lq-hair2,rgba(255,255,255,.18));box-shadow:var(--lq-rim);max-width:100%}
+[dir=rtl] .ds-base{padding:6px 14px 6px 6px}
+.ds-base span{color:var(--lq-silver,#9ea1a6);font-size:13px;white-space:nowrap}
+.ds-base code{direction:ltr;unicode-bidi:isolate;font:500 14px/1.2 Cascadia Code,Consolas,"JetBrains Mono",monospace;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+
+/* ── the three steps ── */
+.ds-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--ds-gap)}
+.ds-step{min-width:0;position:relative;isolation:isolate;overflow:clip;border-radius:var(--ds-r);padding:clamp(18px,3.4vw,30px);
+  background:var(--lq-glass);border:1px solid var(--lq-hair,rgba(255,255,255,.09));box-shadow:var(--lq-rim),var(--lq-drop)}
+/* specular sweep along the top edge + soft caustics inside the glass */
+.ds-step::before{content:"";position:absolute;inset:0 0 auto;height:1px;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.08) 20%,rgba(255,255,255,.45) 50%,rgba(255,255,255,.08) 80%,transparent);background-size:220% 100%;background-position:50% 0}
+.ds-step::after{content:"";position:absolute;inset:-40%;z-index:-1;pointer-events:none;opacity:.55;
+  background:
+    repeating-radial-gradient(circle at 28% 36%,transparent 0 24px,rgba(255,255,255,.03) 28px,transparent 33px),
+    repeating-radial-gradient(circle at 74% 62%,transparent 0 32px,rgba(255,255,255,.026) 36px,transparent 42px)}
+.ds-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.ds-num{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;font-weight:600;font-size:17px;line-height:1;font-family:inherit;color:#fff;
+  background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.55) 0 4%,rgba(255,255,255,.08) 18%,transparent 34%),radial-gradient(circle at 50% 50%,#0b0c0e 54%,#2a2d31 88%,rgba(255,255,255,.45));
+  box-shadow:0 0 18px -4px rgba(255,255,255,.35),inset 0 1px 0 rgba(255,255,255,.2)}
+.ds-step h2{margin:0;font-size:clamp(20px,3vw,26px);line-height:1.3;font-weight:600}
+.ds-step>p,.ds-note{margin:0 0 16px;color:var(--ink2,#c4c7cb);line-height:1.75;max-width:62ch}
+.ds-note{font-size:14px;color:var(--lq-silver,#9ea1a6);margin:12px 0 0}
+.ds-note code,.ds-faq code{direction:ltr;unicode-bidi:isolate;font-family:Cascadia Code,Consolas,monospace;font-size:.92em;color:#fff;background:rgba(255,255,255,.06);padding:1px 6px;border-radius:6px}
+.ds-acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+/* buttons: the site's one system (liquid-v2.css): pearl primary, glass secondary, 48px, pill */
+.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;
+  font-weight:500;font-size:16px;line-height:1.2;font-family:inherit;text-decoration:none;white-space:nowrap;box-sizing:border-box;cursor:pointer;
+  background:var(--lq-glass);border:1px solid var(--lq-hair2,rgba(255,255,255,.18));color:#fff;box-shadow:var(--lq-rim);
+  transition:background .18s var(--ds-ease),box-shadow .18s var(--ds-ease)}
+.ds-btn:hover{background:var(--lq-glass-hi);border-color:rgba(255,255,255,.28)}
+.ds-btn.pri{background-color:#e2e4e7;background-image:radial-gradient(circle at 34% 22%,#fff,#e2e4e7 55%,#c9ccd0);color:#000001;font-weight:600;
+  border-color:rgba(255,255,255,.6);box-shadow:inset 0 1px 0 #fff,inset 0 -6px 12px -6px rgba(0,0,0,.18),0 0 26px -4px rgba(255,255,255,.34)}
+.ds-btn.pri:hover{background-color:#eceef0;box-shadow:inset 0 1px 0 #fff,0 0 36px -2px rgba(255,255,255,.46)}
+.ds-btn svg{width:16px;height:16px;flex:none}
+[dir=rtl] .ds-btn .ds-arrow{transform:scaleX(-1)}
+
+/* ── code box ── */
+.ds-code{border-radius:16px;overflow:hidden;background:#050607;border:1px solid var(--lq-hair2,rgba(255,255,255,.18));box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+.ds-tabs{display:flex;align-items:center;gap:4px;padding:6px;border-bottom:1px solid var(--lq-hair,rgba(255,255,255,.09));direction:ltr}
+.ds-tabs [role=tab]{appearance:none;border:0;background:transparent;color:var(--lq-silver,#9ea1a6);font-weight:500;font-size:14px;line-height:1;font-family:inherit;min-height:38px;padding:0 14px;border-radius:10px;cursor:pointer}
+.ds-tabs [role=tab][aria-selected=true]{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.ds-tabs [role=tab]:hover{color:#fff}
+.ds-copy{margin-inline-start:auto;display:inline-flex;align-items:center;gap:6px;appearance:none;border:1px solid var(--lq-hair2,rgba(255,255,255,.18));
+  background:var(--lq-glass);color:#fff;font-weight:500;font-size:14px;line-height:1;font-family:inherit;min-height:38px;padding:0 14px;border-radius:999px;cursor:pointer;box-shadow:var(--lq-rim)}
+.ds-copy:hover{background:var(--lq-glass-hi)}
+.ds-copy svg{width:15px;height:15px}
+.ds-copy[data-done]{background:#e2e4e7;color:#000001;border-color:#fff}
+.ds-pane{margin:0;padding:16px 18px;overflow-x:auto;direction:ltr;text-align:left;font:13.5px/1.7 Cascadia Code,Consolas,"JetBrains Mono",monospace;color:#e9ebed;tab-size:2;white-space:pre}
+.ds-pane[hidden]{display:none}
+.ds-pane .k{color:#fff;font-weight:600}.ds-pane .s{color:#c9ccd0}.ds-pane .c{color:#7d8085}
+.ds-pane mark{background:rgba(255,255,255,.12);color:#fff;border-radius:4px;padding:0 3px}
+/* no script: every language shows, labelled */
+.ds-nojs .ds-pane[hidden]{display:block;border-top:1px solid var(--lq-hair,rgba(255,255,255,.09))}
+.ds-nojs .ds-tabs [role=tab],.ds-nojs .ds-copy{display:none}
+
+/* ── model cards ── */
+.ds-models{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.ds-model{position:relative;isolation:isolate;overflow:clip;display:flex;flex-direction:column;gap:8px;width:100%;text-align:start;cursor:pointer;
+  appearance:none;font:inherit;color:inherit;padding:16px 16px 14px;border-radius:16px;min-height:100%;
+  background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.012) 55%,rgba(255,255,255,.04));
+  border:1px solid var(--lq-hair,rgba(255,255,255,.09));box-shadow:inset 0 1px .5px rgba(255,255,255,.12);
+  transition:border-color .18s var(--ds-ease),background .18s var(--ds-ease),transform .18s var(--ds-ease)}
+.ds-model:hover{border-color:rgba(255,255,255,.26);background:var(--lq-glass-hi)}
+.ds-model[aria-pressed=true]{border-color:rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 0 0 1px rgba(255,255,255,.35),0 0 30px -8px rgba(255,255,255,.4)}
+.ds-model::after{content:"";position:absolute;inset:auto -30% -60% auto;width:70%;aspect-ratio:1;border-radius:50%;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle,rgba(255,255,255,.07),transparent 65%)}
+.ds-mtop{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.ds-mname{font-weight:600;font-size:16px;color:#fff;line-height:1.35}
+.ds-mtag{flex:none;font-size:12px;color:#000001;background:#e2e4e7;border-radius:999px;padding:3px 9px;line-height:1.3}
+.ds-mid{direction:ltr;unicode-bidi:isolate;font:12.5px/1.3 Cascadia Code,Consolas,monospace;color:var(--lq-silver,#9ea1a6);word-break:break-all}
+.ds-mfor{color:var(--ink2,#c4c7cb);font-size:14px;line-height:1.6;margin:0}
+.ds-mprice{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px;border-top:1px solid var(--lq-hair,rgba(255,255,255,.09));font-size:13.5px;color:var(--lq-silver,#9ea1a6)}
+.ds-mprice b{color:#fff;font-weight:600;direction:ltr;unicode-bidi:isolate}
+.ds-mlim{font-size:12.5px;color:var(--lq-silver,#9ea1a6)}
+.ds-mpick{font-size:13px;color:#fff;opacity:0;transition:opacity .18s}
+.ds-model[aria-pressed=true] .ds-mpick{opacity:1}
+
+/* ── FAQ + help ── */
+.ds-sec{margin-top:clamp(36px,6vw,64px)}
+.ds-sec>h2{font-size:clamp(22px,3.4vw,30px);margin:0 0 16px;font-weight:600}
+.ds-faq{display:grid;gap:10px}
+.ds-faq details{border-radius:16px;background:var(--lq-glass);border:1px solid var(--lq-hair,rgba(255,255,255,.09));box-shadow:var(--lq-rim)}
+.ds-faq summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:0 18px;font-weight:600;color:#fff}
+.ds-faq summary::-webkit-details-marker{display:none}
+.ds-faq summary::after{content:"";flex:none;width:9px;height:9px;border-inline-end:1.6px solid #c9ccd0;border-bottom:1.6px solid #c9ccd0;transform:rotate(45deg);margin-top:-4px;transition:transform .18s var(--ds-ease)}
+.ds-faq details[open] summary::after{transform:rotate(225deg);margin-top:4px}
+.ds-faq details>div{padding:0 18px 16px;color:var(--ink2,#c4c7cb);line-height:1.8}
+.ds-faq details>div p{margin:0 0 8px}
+.ds-help{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:clamp(18px,3vw,28px);border-radius:var(--ds-r);
+  background:var(--lq-glass);border:1px solid var(--lq-hair,rgba(255,255,255,.09));box-shadow:var(--lq-rim)}
+.ds-help h2{margin:0 0 4px;font-size:22px}
+.ds-help p{margin:0;color:var(--ink2,#c4c7cb)}
+
+/* ── motion: slow water in the glass, a light passing over each step once. Nothing moves under reduced motion. ── */
+@media (prefers-reduced-motion:no-preference){
+  .ds-step::after{animation:ds-caustic 18s ease-in-out infinite alternate}
+  .ds-step:nth-child(2)::after{animation-duration:23s;animation-direction:alternate-reverse}
+  .ds-step::before{animation:ds-glint 2.6s var(--ds-ease) .3s both}
+  .ds-step:nth-child(2)::before{animation-delay:.6s}.ds-step:nth-child(3)::before{animation-delay:.9s}
+  .ds-model:active{transform:scale(.985)}
+}
+@keyframes ds-caustic{from{transform:translate3d(-3%,-2%,0) rotate(0)}to{transform:translate3d(3%,2%,0) rotate(6deg) scale(1.05)}}
+@keyframes ds-glint{from{background-position:120% 0}to{background-position:-20% 0}}
+@media (prefers-reduced-motion:reduce){.ds *,.ds *::before,.ds *::after{animation:none!important;transition:none!important}}
+@media (hover:none){.ds-step::after{animation:none}}
+
+/* ── phones ── */
+@media (max-width:640px){
+  .ds-hero{text-align:start}
+  .ds-base{display:flex;width:100%}
+  .ds-models{grid-template-columns:1fr}
+  .ds .ds-btn{width:100%}
+  .ds-pane{font-size:12.5px;padding:14px}
+  .ds-tabs [role=tab]{padding:0 10px}
+  .ds-help .ds-btn{width:100%}
+}
+@media print{.ds-hero::before,.ds-step::after{display:none}}
+.ds .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ds-acts+.ds-note{margin-top:14px}

@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="pt" dir="ltr" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>OPTES · Crie no seu idioma: agente de IA para código, imagens, vídeo e jogos</title>
+<meta name="description" content="O OPTES é uma plataforma de IA que trabalha no seu idioma: um agente de IA e assistente de programação que termina o trabalho, gera imagens e vídeos, cria jogos e oferece uma API de IA para desenvolvedores.">
+<link rel="canonical" href="index.html">
+<link rel="alternate" hreflang="ar" href="../index.html">
+<link rel="alternate" hreflang="en" href="../en/index.html">
+<link rel="alternate" hreflang="fr" href="../fr/index.html">
+<link rel="alternate" hreflang="es" href="../es/index.html">
+<link rel="alternate" hreflang="de" href="../de/index.html">
+<link rel="alternate" hreflang="it" href="../it/index.html">
+<link rel="alternate" hreflang="pt" href="index.html">
+<link rel="alternate" hreflang="tr" href="../tr/index.html">
+<link rel="alternate" hreflang="ru" href="../ru/index.html">
+<link rel="alternate" hreflang="fa" href="../fa/index.html">
+<link rel="alternate" hreflang="ur" href="../ur/index.html">
+<link rel="alternate" hreflang="hi" href="../hi/index.html">
+<link rel="alternate" hreflang="id" href="../id/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="../zh/index.html">
+<link rel="alternate" hreflang="ja" href="../ja/index.html">
+<link rel="alternate" hreflang="ko" href="../ko/index.html">
+<link rel="alternate" hreflang="x-default" href="../en/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OPTES">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="fa_IR">
+<meta property="og:locale:alternate" content="ur_PK">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:title" content="OPTES 1.2 · IA que não para na resposta. Ela termina o trabalho.">
+<meta property="og:description" content="Um agente de IA que trabalha no seu idioma: programa, mostra a pré-visualização, controla seu computador com a sua permissão, gera imagens e vídeos e cria jogos.">
+<meta property="og:url" content="https://optes3.com/pt/">
+<meta property="og:image" content="https://optes3.com/assets/og/og-pt.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="O logotipo do OPTES e a frase: IA que não para na resposta. Ela termina o trabalho, ao lado de um buraco negro">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+
+<link rel="stylesheet" href="../assets/optes-tokens.css%3Fv=325d9c0a62.css" data-ux>
+<link rel="stylesheet" href="../assets/fonts/f4.css%3Fv=20261107.css">
+<link rel="stylesheet" href="../assets/site.css%3Fv=20261015r1602.css">
+<style>
+/* ── hero: heading, category links, the download card ── */
+.hero{padding-block:clamp(72px,11vw,152px) 0;text-align:center}
+.hero h1{font:500 clamp(30px,3.6vw,48px)/1.25 var(--ar)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:760px;margin:18px auto 0}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--rule2);background:transparent;color:var(--ink);font:400 14px/1 var(--ar);cursor:pointer;transition:background var(--fast) var(--ease),border-color var(--fast) var(--ease)}
+.chip svg{width:16px;height:16px;color:var(--ink2)}
+.chip:hover{background:var(--s2)}
+
+/* ── launch: one card, one clock ── */
+.launch{margin-top:clamp(72px,9vw,120px);border-radius:var(--rl);background:radial-gradient(90% 120% at 50% 118%,rgba(255,255,255,.1),rgba(255,255,255,0) 58%),var(--s1);border:1px solid var(--rule);padding:clamp(48px,7vw,96px) 24px;text-align:center}
+.launch h2{margin-top:20px;font:300 clamp(44px,6.4vw,84px)/1 var(--lat);letter-spacing:-.01em;direction:ltr}
+.clock{display:flex;justify-content:center;align-items:flex-start;gap:clamp(10px,2.4vw,32px);margin-top:clamp(28px,4vw,44px);direction:ltr}
+.clock .u{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:2.2ch}
+.clock .n{font:200 clamp(40px,6.4vw,88px)/1 var(--lat);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.clock .l{font:400 13px/1 var(--ar);color:var(--ink3);direction:rtl}
+.clock .c{font:200 clamp(32px,5vw,68px)/1 var(--lat);color:var(--ink3);transform:translateY(-.04em)}
+.launch .when{margin-top:clamp(24px,3vw,36px);font-size:15px;color:var(--ink2);text-wrap:balance}
+.launch .live{margin-top:24px;font:400 clamp(22px,3vw,32px)/1.4 var(--ar)}
+.launch .row{margin-top:32px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+/* Linux under the Windows button (build.py linux_line; shown when the download opens) */
+.launch .lxrow{margin-top:10px}
+.launch .lx{margin-top:14px;font-size:13px;color:var(--ink3);text-wrap:balance}
+.launch .lx p+p{margin-top:4px}
+.launch .lx a,.launch .lx button{display:inline;min-height:0;padding:0;border:0;background:none;font:inherit;color:var(--ink2);cursor:pointer;text-decoration:underline;text-decoration-color:var(--rule2);text-underline-offset:3px}
+.launch .lx a:hover{color:var(--ink)}
+.launch .lx code{font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink3);overflow-wrap:anywhere}
+.launch .sha{margin:20px auto 0;max-width:46em;font-size:12px;line-height:1.6;color:var(--ink3);direction:ltr;overflow-wrap:anywhere}
+.launch .sha code{font:400 12px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink2);user-select:all}
+.launch .sha a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* ── research: two large space cards ── */
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.duo .media{aspect-ratio:1/1}
+.duo h3{margin-top:20px;font:500 clamp(22px,2.2vw,32px)/1.3 var(--ar)}
+.duo .card:hover .media img{transform:scale(1.035)}
+.duo .play{position:absolute;z-index:2;inset-block-end:16px;inset-inline-start:16px;display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:13px;color:var(--ink)}
+.duo .play i{width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{50%{opacity:.25}}
+.card .credit{position:absolute;z-index:2;inset-block-start:14px;inset-inline-end:16px;font:400 11px/1 var(--lat);color:rgba(255,255,255,.62);direction:ltr}
+
+/* ── products: four cards ── */
+.quad{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.quad .media{aspect-ratio:1/1}
+.tile{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(110% 90% at 70% 10%,#2c2c2c,#0c0c0c 70%)}
+.tile.t2{background:radial-gradient(120% 100% at 20% 90%,#303030,#0b0b0b 68%)}
+.tile.t3{background:radial-gradient(100% 90% at 50% 0%,#2a2a2a,#0a0a0a 72%)}
+.tile .big{font:200 clamp(56px,6vw,96px)/1 var(--lat);letter-spacing:-.02em;direction:ltr;color:var(--ink)}
+.tile svg{width:34%;height:auto;color:var(--ink)}
+.quad .card:hover .tile{filter:brightness(1.18)}
+.tile{transition:filter var(--slow) var(--ease)}
+.quad video{opacity:0}
+.quad .playing video{opacity:1}
+
+/* ── capabilities: a news-style list ── */
+.caps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 64px}
+.cap{display:grid;grid-template-columns:136px minmax(0,1fr);align-items:center;gap:28px}
+.cap .th{aspect-ratio:1/1;border-radius:16px;display:grid;place-items:center;background:radial-gradient(100% 100% at 30% 15%,#2a2a2a,#0e0e0e 75%);color:var(--ink)}
+.cap:nth-child(3n+2) .th{background:radial-gradient(100% 100% at 80% 90%,#2e2e2e,#0c0c0c 72%)}
+.cap:nth-child(3n) .th{background:radial-gradient(100% 100% at 50% 0%,#262626,#0b0b0b 70%)}
+.cap .th svg{width:42%;height:auto}
+.cap h3{font:500 17px/1.5 var(--ar)}
+.cap p{margin-top:4px;font-size:15px;line-height:1.6;color:var(--ink2)}
+.cap .meta{margin-top:6px}
+.cap .ok{display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+.cap .ok::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink)}
+
+
+/* ── the face ── */
+.facecard{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:stretch;border-radius:var(--rl);border:1px solid var(--rule);background:#050505;overflow:hidden}
+.facetext{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.facetext h2{font:500 clamp(28px,3vw,40px)/1.25 var(--ar)}
+.facetext p{color:var(--ink2)}
+.facetext .note{font-size:13px;color:var(--ink3)}
+.facestage{position:relative;min-height:600px;touch-action:pan-y;cursor:crosshair}
+.facestage canvas{position:absolute;inset:0;width:100%;height:100%}
+
+/* ── comparison ── */
+.center{text-align:center;max-width:720px;margin-inline:auto}
+.center h2{margin-top:10px;font:500 clamp(28px,3.4vw,44px)/1.25 var(--ar)}
+.center .lead{margin-top:16px;color:var(--ink2);font-size:17px}
+.cmp{max-width:1080px;margin:48px auto 0}
+.cmp-row{display:grid;grid-template-columns:minmax(0,2fr) repeat(4,minmax(0,1fr));align-items:center;border-bottom:1px solid var(--rule)}
+.cmp-row>*{padding:18px 12px;text-align:center}
+.cmp-row>:first-child{text-align:start;padding-inline-start:0}
+.cmp-head>*{font-size:14px;color:var(--ink3);align-self:end}
+.cmp-head .us{color:var(--ink);font-weight:500}
+.cmp-row .f{font-size:16px}
+.cmp-row .m{display:flex;flex-direction:column;align-items:center;gap:6px}
+.cmp-row .us{background:rgba(255,255,255,.04)}
+.cmp-head .us{border-radius:14px 14px 0 0}
+.mk{display:grid;place-items:center;width:22px;height:22px;color:var(--ink3);font:400 13px/1 var(--ar)}
+.mk svg{width:18px;height:18px}
+.mk.y{color:var(--ink)}
+.mk.p{width:auto;height:auto;padding:4px 8px;border-radius:999px;border:1px solid var(--rule2);color:var(--ink2);font-size:12px}
+.cmp-row .m small{display:none}
+.cmp-note{max-width:1080px;margin:20px auto 0;font-size:13px;color:var(--ink3);text-align:center}
+
+/* ── safety ── */
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px}
+.scard{min-height:340px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:28px;border-radius:var(--r);border:1px solid var(--rule);background:var(--s1)}
+.scard h3{font:500 20px/1.4 var(--ar)}
+.scard p{font-size:15px;color:var(--ink2)}
+.scard svg{width:40px;height:40px;color:var(--ink)}
+.after{margin-top:24px;text-align:center}
+
+/* ── company ── */
+.company{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px 96px;align-items:start}
+.company .big{font:400 clamp(28px,3.4vw,44px)/1.3 var(--ar);text-wrap:balance}
+.company .prose p{color:var(--ink2);font-size:17px}
+.company .prose p+p{margin-top:1em}
+.company .prose strong{color:var(--ink);font-weight:500}
+
+/* ── closing ── */
+.closing{border-radius:var(--rl);background:var(--s2);padding:clamp(64px,9vw,128px) 24px;text-align:center}
+.closing h2{font:500 clamp(28px,3.6vw,48px)/1.25 var(--ar);max-width:20ch;margin-inline:auto}
+.closing .when{margin-top:16px;color:var(--ink2)}
+.closing .live{margin-top:16px}
+.closing .row{margin-top:32px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+
+@media (max-width:1100px){.quad{grid-template-columns:repeat(2,minmax(0,1fr))}.caps{gap:24px 40px}.cap{grid-template-columns:112px minmax(0,1fr);gap:20px}
+}
+@media (max-width:900px){
+  .facecard{grid-template-columns:minmax(0,1fr)}.facestage{min-height:480px;order:-1}
+  .trio{grid-template-columns:minmax(0,1fr)}.scard{min-height:0}
+  .company{grid-template-columns:minmax(0,1fr)}
+  .caps{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .cmp{display:flex;flex-direction:column;gap:12px}
+  .cmp-head{display:none}
+  .cmp-row{grid-template-columns:repeat(4,minmax(0,1fr));padding:18px 12px;border:1px solid var(--rule);border-radius:16px;background:var(--s1)}
+  .cmp-row>*{padding:8px 2px}
+  .cmp-row .f{grid-column:1/-1;margin-bottom:8px;padding-inline:4px;text-align:start}
+  .cmp-row .us{border-radius:12px}
+  .cmp-row .m small{display:block;font-size:12px;line-height:1.3;color:var(--ink3)}
+  .cmp-row .us small{color:var(--ink)}
+}
+@media (max-width:600px){
+  .hero{text-align:start}
+  .chips{justify-content:flex-start}
+  .duo,.quad{grid-template-columns:minmax(0,1fr);gap:40px}
+  .duo .media{aspect-ratio:4/5}
+  .quad .media{aspect-ratio:4/3}
+  .cap{grid-template-columns:88px minmax(0,1fr);gap:16px}
+  .cap .th{border-radius:12px}
+  .center{text-align:start}
+  .cmp-note{text-align:start}
+  .after{text-align:start}
+  .facestage{min-height:420px}
+  .launch .row .btn,.closing .row .btn{flex:1}
+  .clock{gap:6px}
+  .clock .c{display:none}
+  .clock .u{flex:1;padding:14px 0;border-radius:14px;background:var(--s3)}
+  .clock .n{font-size:40px}
+}
+
+/* ── professions strip and questions ── */
+.for-lead{max-width:44em;margin:-12px 0 28px;color:var(--ink2)}
+.faq-home{max-width:900px;margin:40px auto 0}
+@media (max-width:600px){.for-lead{margin-top:-16px}}
+
+.hero .hero-web{margin:24px 0 8px;text-align:center}
+.hero .hero-web .btn{min-height:52px;padding:0 32px;font-size:17px}
+@media (max-width:600px){.hero .hero-web{text-align:start}.hero .hero-web .btn{width:100%}}
+/* left-to-right pages: the language's own type (--ar is set per language by build.py), left-to-right details */
+.clock .l{direction:ltr}
+.chs li s::after{transform-origin:left}
+.cover{border-radius:12px 6px 6px 12px;box-shadow:inset -6px 0 0 rgba(0,0,0,.35),0 24px 40px -18px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.08)}
+.center h2,.closing h2,.facetext h2{letter-spacing:-.015em}
+:root{--ar:"Manrope","Segoe UI","Helvetica Neue",Arial,sans-serif}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://optes3.com/#organization","name":"OPTES","alternateName":["أوبتس","اوبتس","اوبتيس","أوبتيس","OPTES AI"],"url":"https://optes3.com/","email":"support@optes3.com","logo":{"@type":"ImageObject","url":"https://optes3.com/assets/icons/logo-512.png","width":512,"height":512},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@optes3.com","availableLanguage":["ar","en"]}},{"@type":"WebSite","@id":"https://optes3.com/#website","url":"https://optes3.com/","name":"OPTES","alternateName":["أوبتس","اوبتس","اوبتيس","أوبتيس","OPTES AI"],"inLanguage":["ar","en","fr","es","de","it","pt","tr","ru","fa","ur","hi","id","zh-Hans","ja","ko"],"publisher":{"@id":"https://optes3.com/#organization"}},{"@type":"SoftwareApplication","@id":"https://optes3.com/#optes-code","name":"OPTES CODE","alternateName":["أوبتس كود","اوبتس كود"],"applicationCategory":"DeveloperApplication","applicationSubCategory":"Assistente de IA","operatingSystem":"Windows 10, Windows 11, Linux","processorRequirements":"64-bit","softwareVersion":"1.5.17","fileSize":"334 MB","downloadUrl":"https://dl.optes3.com/get/windows","url":"https://optes3.com/pt/","image":"https://optes3.com/assets/og/og-pt.jpg","inLanguage":["ar","en"],"description":"OPTES CODE para Windows: um agente de IA e assistente de programação que trabalha no seu idioma e escreve, testa e mostra ao vivo projetos inteiros, controla seu computador depois da sua aprovação, gera imagens, vídeo, fala e música, e cria jogos.","featureList":["Programação e projetos completos","Pré-visualização ao vivo","Controle do computador após a sua aprovação","Uma equipe de agentes","Publicação com um clique","Voz para texto","Geração de imagens","Geração de vídeo","Voz","Música","Criação de jogos"],"publisher":{"@id":"https://optes3.com/#organization"},"offers":[{"@type":"Offer","name":"مجاني / Free","price":"0","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"free","availability":"https://schema.org/InStock"},{"@type":"Offer","name":"برو / Pro","price":"19000","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"subscription","availability":"https://schema.org/InStock"},{"@type":"Offer","name":"برو ٢× / Pro 2x","price":"30000","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"subscription","availability":"https://schema.org/InStock"},{"@type":"Offer","name":"برو بلس / Pro+","price":"50000","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"subscription","availability":"https://schema.org/InStock"},{"@type":"Offer","name":"ماكس / Max","price":"144000","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"subscription","availability":"https://schema.org/InStock"},{"@type":"Offer","name":"ماكس بلس / Max Plus","price":"288000","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"subscription","availability":"https://schema.org/InStock"},{"@type":"Offer","name":"ماكس ألترا / Max Ultra","price":"569000","priceCurrency":"IQD","url":"https://optes3.com/pt/plans/","category":"subscription","availability":"https://schema.org/InStock"}]},{"@type":"FAQPage","@id":"https://optes3.com/pt/#faq","url":"https://optes3.com/pt/","inLanguage":"pt","mainEntity":[{"@type":"Question","name":"O que é o OPTES?","acceptedAnswer":{"@type":"Answer","text":"O OPTES (escrito أوبتس, اوبتس ou اوبتيس em árabe) é uma plataforma de IA que trabalha no seu idioma. É um agente de IA que não para na resposta, mas termina o trabalho: programa projetos inteiros e mostra a pré-visualização deles rodando, controla seu computador depois da sua aprovação, gera imagens, vídeo, fala e música, e cria jogos."}},{"@type":"Question","name":"Em quais sistemas o app OPTES CODE funciona e como faço para obtê-lo?","acceptedAnswer":{"@type":"Answer","text":"Ele funciona no Windows 10 e 11, 64 bits, e o instalador tem cerca de 285 MB. O link de download está no cartão de download, no topo desta página."}},{"@type":"Question","name":"O OPTES é só um assistente de programação?","acceptedAnswer":{"@type":"Answer","text":"Não. A programação é uma parte: ele lê a estrutura de um projeto, escreve, testa e revisa o que alterou. Junto com isso vêm a pré-visualização ao vivo, uma equipe de agentes para tarefas longas, voz para texto, geração de imagens e vídeos, voz e música."}},{"@type":"Question","name":"Ele entende árabe e seus dialetos?","acceptedAnswer":{"@type":"Answer","text":"Sim. A interface começa pela direita, e ele responde no idioma em que você escreve: inglês, árabe padrão moderno ou o seu próprio dialeto. O código continua na sua própria linguagem."}},{"@type":"Question","name":"Ele vai fazer alguma coisa no meu computador sem a minha permissão?","acceptedAnswer":{"@type":"Answer","text":"Tudo o que puder afetar seus arquivos, seu computador ou seus gastos passa por você, conforme o modo de aprovações que você escolher. A proteção de comandos bloqueia comandos destrutivos, os pontos de restauração mantêm seus arquivos seguros e o limite de gastos interrompe o trabalho pago no valor que você definiu."}},{"@type":"Question","name":"O OPTES tem uma API de IA para desenvolvedores?","acceptedAnswer":{"@type":"Answer","text":"Sim. A plataforma para desenvolvedores oferece uma única API e uma única chave para doze modelos OPTES, que cobrem texto, código, visão, imagens, vídeo, fala, música e busca."}},{"@type":"Question","name":"Para quem é o OPTES?","acceptedAnswer":{"@type":"Answer","text":"Para qualquer pessoa que trabalha no computador: programadores, designers, criadores de conteúdo, estudantes, professores, fundadores e muitos outros. As páginas Para cada profissão mostram o que ele faz especificamente no seu trabalho."}},{"@type":"Question","name":"Como entro em contato com vocês ou relato uma vulnerabilidade de segurança?","acceptedAnswer":{"@type":"Answer","text":"Envie um e-mail para support@optes3.com. Para detalhes sobre divulgação responsável, consulte a página de segurança."}}]}]}</script>
+<link rel="stylesheet" href="../assets/redesign.css%3Fv=20261013a.css">
+<link rel="stylesheet" href="../assets/sections.css%3Fv=20261013b.css">
+<link rel="stylesheet" href="../assets/liquid.css%3Fv=20261107v2h.css">
+<link rel="stylesheet" href="../assets/news12.css%3Fv=f4a9112bbf.css" data-news12>
+<link rel="stylesheet" href="../assets/dl.css%3Fv=95d460fcf3.css">
+<link rel="stylesheet" href="../assets/vqa.css%3Fv=213d7658f3.css">
+<link rel="stylesheet" href="../assets/cloud-site.css%3Fv=20261114d.css">
+<link rel="stylesheet" href="../assets/ux-bind.css%3Fv=bdd71f35fb.css" data-ux>
+</head>
+<body>
+<a class="skip" href="index.html#main">Pular para o conteúdo</a>
+<header class="sn"><div class="wrap in">
+  <a class="sn-logo" href="index.html" aria-label="Página inicial do OPTES">OPTES</a>
+  <nav aria-label="Seções"><ul class="sn-links"><li><a href="plans/index.html">Planos</a></li>
+    <li><a href="cloud/index.html" data-oxnav>OPTES Cloud</a></li>
+    <li><a href="index.html#research">Pesquisa</a></li>
+    <li><a href="index.html#products">Produtos</a></li>
+    <li><a href="../en/developers/index.html">Desenvolvedores</a></li>
+    <li><a href="index.html#safety">Segurança</a></li>
+    <li><a href="../en/about/index.html">Empresa</a></li>
+  </ul></nav>
+  <details class="sn-lang" data-lang-menu><summary aria-label="Escolha um idioma: Português"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 3.9 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.7 5.4 8s.8 4.3 2.6 6.2"/></svg><span class="ln">Português</span><span class="lc">PT</span></summary><ul class="sn-langs"><li><a href="../index.html" hreflang="ar" lang="ar">العربية</a></li><li><a href="../en/index.html" hreflang="en" lang="en">English</a></li><li><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../es/index.html" hreflang="es" lang="es">Español</a></li><li><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a></li><li><a href="../it/index.html" hreflang="it" lang="it">Italiano</a></li><li><a href="index.html" hreflang="pt" lang="pt" aria-current="true">Português</a></li><li><a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../fa/index.html" hreflang="fa" lang="fa">فارسی</a></li><li><a href="../ur/index.html" hreflang="ur" lang="ur">اردو</a></li><li><a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../zh/index.html" hreflang="zh-Hans" lang="zh">中文</a></li><li><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a></li></ul></details>
+  <div class="sn-end">
+    <a class="btn sm" href="index.html#launch">Baixar</a>
+    <a class="btn sm light" href="https://web.optes3.com/app/" rel="noopener">Entrar</a>
+  </div>
+  <button type="button" class="sn-menu-btn" aria-expanded="false" aria-controls="sn-menu" aria-label="Menu" data-l-open="Menu" data-l-close="Fechar menu"><i></i><i></i></button>
+</div></header>
+<div class="sn-menu" id="sn-menu" aria-hidden="true">
+  <nav aria-label="Menu"><a href="plans/index.html">Planos</a>
+    <a href="cloud/index.html" data-oxnav>OPTES Cloud</a>
+    <a href="index.html#research">Pesquisa</a>
+    <a href="index.html#products">Produtos</a>
+    <a href="../en/developers/index.html">Desenvolvedores</a>
+    <a href="index.html#safety">Segurança</a>
+    <a href="../en/about/index.html">Empresa</a>
+  </nav>
+  <div class="acts">
+    <a class="btn light" href="https://web.optes3.com/app/" rel="noopener">Entrar</a>
+    <a class="btn" href="index.html#launch">Baixar</a>
+  </div>
+</div>
+
+<main id="main"><!--news12--><aside class="news12" aria-label="Modelos OPTES 1.2"><p class="n12-head"><span class="n12-tag">Novo</span>Chegou o OPTES 1.2 Series Lite</p><ul><li>OPTES 1.2 Series Lite: um Series mais leve para o dia a dia, com memória de 512K tokens, a partir do Lite.</li><li>OPTES 1.2 Super Lite e Murphy 1.2.5 Super X Lite a partir do Lite, abertos a todos.</li><li>OPTES 1.2.1 Flash e OPTES 1.2 Series a partir do Lite; OPTES 1.2 Super a partir do Pro 2x.</li><li>Flash, Series e Super recusam menos pedidos, por isso são para adultos: basta confirmar 18+ com um toque.</li></ul><a href="plans/index.html">Ver os planos</a></aside><!--/news12-->
+<section class="hero wrap" aria-labelledby="hero-h">
+  <h1 id="hero-h">O que o <span class="lat">OPTES</span> pode fazer por você?</h1>
+  <p class="hero-web"><a class="btn light" href="https://web.optes3.com/app/" rel="noopener">Abrir o <span class="lat">OPTES</span> na web</a></p>
+  <nav class="chips" aria-label="Exemplos por tipo">
+    <a class="chip" href="index.html#capabilities"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 4.5 2 8l3.5 3.5M10.5 4.5 14 8l-3.5 3.5"/></svg>Código</a>
+    <a class="chip" href="index.html#capabilities"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="12" height="10" rx="2"/><path d="m2.5 11.5 3.5-3.5 3 3 2-2 2.5 2.5"/><circle cx="10.5" cy="6" r="1"/></svg>Imagem</a>
+    <a class="chip" href="index.html#capabilities"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="2"/><path d="m7 6 3 2-3 2z"/></svg>Vídeo</a>
+    <a class="chip" href="../game/index.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 5h7a3 3 0 0 1 2.9 3.7l-.6 2.4a1.6 1.6 0 0 1-2.7.7L9.5 10h-3l-1.6 1.8a1.6 1.6 0 0 1-2.7-.7l-.6-2.4A3 3 0 0 1 4.5 5z"/><path d="M5 7v2M4 8h2"/></svg>Jogo</a>
+    <a class="chip" href="index.html#research"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3.5 3.5"/></svg>Pesquisa</a>
+  </nav>
+
+  <div class="launch" id="launch" aria-live="polite">
+    <h2>Baixar</h2>
+    <p class="live" data-live>O <span class="lat">OPTES</span> já está disponível.</p>
+    <p class="when req">Windows 10 e 11 · 64 bits · 334 MB · v1.5.17</p><!--dl:auto--><div class="dl-auto-wrap" data-dl-auto="home" hidden><a class="btn light dl-auto" href="https://dl.optes3.com/get/android-arm64">Baixar para o seu dispositivo<small data-dl-picked></small></a></div><p class="dl-apple" data-dl-apple hidden>iPhone e Mac: ainda não disponível. Você pode usar o OPTES na web. <a href="https://web.optes3.com/app/" rel="noopener">Abrir na web</a></p><!--/dl:auto-->
+    <div class="row"><a class="btn light" href="https://dl.optes3.com/get/windows" data-dl="windows" data-dl-label="Windows .exe · v1.5.17 · 334 MB" download rel="noopener"><svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Baixe o <span class="lat">OPTES</span> para Windows</a><a class="btn" href="index.html#capabilities">Veja os recursos</a><a class="btn" href="https://web.optes3.com/app/" rel="noopener">Entrar</a></div>
+    <div class="row lxrow"><a class="btn" href="https://dl.optes3.com/get/linux-deb" data-dl="linux-deb" data-dl-label="Linux .deb · v1.5.2 · 289 MB" download rel="noopener"><svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Linux <span class="lat">.deb</span></a><a class="btn" href="https://dl.optes3.com/get/linux-appimage" data-dl="linux-appimage" data-dl-label="Linux AppImage · v1.5.2 · 377 MB" download rel="noopener"><svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Linux <span class="lat">AppImage</span></a></div><div class="lx"><p>Linux (Kali / Debian) · <span class="lat">v1.5.2</span></p><p><code dir="ltr">sudo apt install ./OPTES-Code-1.5.2-linux-amd64.deb</code></p></div><!--dl:row--><div class="row anrow"><a class="btn" href="https://dl.optes3.com/get/android-arm64" data-dl="android-arm64" data-dl-label="Android 64 bits (a maioria dos aparelhos) · v1.0.59 · 17.7 MB" download rel="noopener"><svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Android · 64 bits (a maioria dos aparelhos) <span class="lat">v1.0.59 · 17.7 MB</span></a><a class="btn" href="https://dl.optes3.com/get/android-armv7" data-dl="android-armv7" data-dl-label="Android 32 bits (aparelhos antigos) · v1.0.59 · 17.8 MB" download rel="noopener"><svg class="ic" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>Android · 32 bits (aparelhos antigos) <span class="lat">v1.0.59 · 17.8 MB</span></a></div><div class="lx"><p>Android · <span class="lat">Android 7.0+ · alpha</span></p><p>Na dúvida? Baixe a versão de 64 bits.</p></div><!--/dl:row-->
+    <p class="sha"><span class="lat">SHA-256</span> <code>3f372d65b605f1453cbd286dfcc829705cb3409cf27691b38d5bd0c605694804</code> · <a href="../SHA256SUMS" class="lat">SHA256SUMS</a></p><!--dl:sha--><p class="sha dl-apk-sha"><span class="lat">Android SHA-256</span> 64: <code>704c6771a15937ad44f07137592d07f33fd25ecc97ffc61681fcd3c9177efb06</code> · 32: <code>fad48cf4e77e129b5f9058089ce7bec6f92208d2fa948dcc28f5305bb15197e0</code></p><!--/dl:sha-->
+  </div>
+</section>
+
+<section class="sec wrap" id="research" aria-labelledby="research-h">
+  <div class="sh rv"><h2 id="research-h">Pesquisa</h2><a class="link" href="../galaxy/index.html" hreflang="ar">Ver tudo</a></div>
+  <div class="duo">
+    <a class="card rv" href="../galaxy/index.html">
+      <span class="media"><picture><source media="(max-width:600px)" srcset="../assets/frame-galaxy-p.jpg"><img src="../assets/frame-galaxy.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async"></picture><span class="play"><i aria-hidden="true"></i>Simulação ao vivo</span></span>
+      <h3>A Via Láctea, estrela por estrela</h3>
+      <p class="meta"><b>Pesquisa</b><span>Uma simulação interativa no seu navegador</span></p>
+    </a>
+    <a class="card rv" href="../galaxy/index.html#hero-bh">
+      <span class="media"><picture><source media="(max-width:600px)" srcset="../assets/frame-blackhole-p.jpg"><img src="../assets/frame-blackhole.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async"></picture><span class="play"><i aria-hidden="true"></i>Simulação ao vivo</span></span>
+      <h3>Um buraco negro: a luz curvada pela gravidade</h3>
+      <p class="meta"><b>Pesquisa</b><span>Calculado a partir das equações da relatividade geral</span></p>
+    </a>
+  </div>
+</section>
+
+<section class="sec wrap" id="products" aria-labelledby="products-h">
+  <div class="sh rv"><h2 id="products-h">Produtos</h2><a class="link" href="index.html#capabilities">Todos os recursos</a></div>
+  <div class="quad">
+    <a class="card rv" href="index.html#capabilities">
+      <span class="media"><span class="tile"><span class="big">1.2</span></span></span>
+      <h3>Recursos do <span class="lat">OPTES 1.2</span></h3>
+      <p class="meta"><b>Produtos</b><span>Tudo disponível desde o primeiro dia</span></p>
+    </a>
+    <a class="card rv" href="../game/index.html" id="gameCard">
+      <span class="media"><img src="../game/media/shot-1-800.webp" alt="" width="800" height="450" loading="lazy" decoding="async"><video muted loop playsinline preload="none" aria-hidden="true"><source src="../game/media/trailer.mp4" type="video/mp4"></video></span>
+      <h3>Criação de jogos: <span class="lat">NightDistrict</span></h3>
+      <p class="meta"><b>Produtos</b><span>Um filme e cenas gravadas na própria engine</span></p>
+    </a>
+    <a class="card rv" href="../en/developers/index.html">
+      <span class="media"><span class="tile t2"><span class="big">{ }</span></span></span>
+      <h3>Plataforma para desenvolvedores</h3>
+      <p class="meta"><b>Desenvolvedores</b><span>Uma única API para tudo</span></p>
+    </a>
+    <a class="card rv" href="index.html#safety">
+      <span class="media"><span class="tile t3"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M24 5 8 11v11c0 10 7 18 16 21 9-3 16-11 16-21V11z"/><path d="m17 24 5 5 9-10"/></svg></span></span>
+      <h3>Segurança: a decisão continua sua</h3>
+      <p class="meta"><b>Segurança</b><span>Aprovações, proteção de comandos e limite de gastos</span></p>
+    </a>
+  </div>
+</section>
+
+<section class="sec wrap" id="web" aria-labelledby="web-h">
+  <div class="center rv">
+    <p class="eyebrow">Na web</p>
+    <h2 id="web-h">No seu navegador, sem instalar nada</h2>
+    <p>O <span class="lat">OPTES</span> em um espaço de trabalho privado só seu na web: seus arquivos e conversas ficam na sua conta, em qualquer dispositivo.</p>
+    <p>Uma só conta para o app e o navegador: o mesmo plano e o mesmo crédito, e o que você compra em um aparece no outro.</p>
+    <div class="row"><a class="btn light" href="https://web.optes3.com/app/">Abrir o <span class="lat">OPTES</span> na web</a></div>
+    <p class="note">Entre com sua conta Google ou OPTES.</p>
+  </div>
+</section>
+
+<section class="sec wrap" id="capabilities" aria-labelledby="caps-h">
+  <div class="sh rv"><h2 id="caps-h">Recursos do <span class="lat">OPTES 1.2</span></h2><a class="link" href="index.html#compare">Comparação</a></div>
+  <ul class="caps">
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 15 8 24l9 9M31 15l9 9-9 9M27 11l-6 26"/></svg></span><div><h3>Programação e projetos completos</h3><p>De um único arquivo a um projeto inteiro: ele lê a estrutura, escreve, testa e revisa o que alterou.</p><p class="meta"><span class="ok">Disponível</span><span>Programação</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="9" width="36" height="28" rx="4"/><path d="M6 16h36"/><rect x="30" y="22" width="8" height="12" rx="2"/></svg></span><div><h3>Pré-visualização ao vivo</h3><p>Ele acompanha o que constrói enquanto roda, em tamanhos de desktop, tablet e celular, e corrige um erro com um clique.</p><p class="meta"><span class="ok">Disponível</span><span>Programação</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M15 9l22 13-10 2.5L21.5 35z"/><path d="m27 24.5 8 8"/></svg></span><div><h3>Controle do computador</h3><p>Ele clica, digita e alterna entre janelas. Nunca começa antes da sua aprovação, e você pode pará-lo a qualquer momento.</p><p class="meta"><span class="ok">Disponível</span><span>Agente</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="12" r="5"/><circle cx="11" cy="34" r="5"/><circle cx="37" cy="34" r="5"/><path d="m21 16.5-7 12.5M27 16.5l7 12.5M16 34h16"/></svg></span><div><h3>Uma equipe de agentes</h3><p>Um desenvolvedor, um revisor, um pesquisador e um coordenador dividem uma tarefa longa até concluí-la.</p><p class="meta"><span class="ok">Disponível</span><span>Agente</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="24" cy="24" r="16"/><path d="M8 24h32M24 8c5 5 7 10 7 16s-2 11-7 16M24 8c-5 5-7 10-7 16s2 11 7 16"/></svg></span><div><h3>Publicação com um clique</h3><p>De um projeto no seu computador a um site no ar, depois que você vê o custo e aprova.</p><p class="meta"><span class="ok">Disponível</span><span>Publicação</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="18" y="6" width="12" height="22" rx="6"/><path d="M11 22a13 13 0 0 0 26 0M24 35v7"/></svg></span><div><h3>Voz para texto</h3><p>Fale em vez de digitar, e suas palavras chegam como texto, exatamente como você disse.</p><p class="meta"><span class="ok">Disponível</span><span>Voz</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="9" width="36" height="30" rx="4"/><path d="m7 34 11-11 9 9 5-5 9 9"/><circle cx="32" cy="18" r="3"/></svg></span><div><h3>Geração de imagens</h3><p>Imagens a partir de uma descrição escrita, no estilo que você escolher.</p><p class="meta"><span class="ok">Disponível</span><span>Mídia</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="6" y="11" width="36" height="26" rx="4"/><path d="m21 18 9 6-9 6z"/></svg></span><div><h3>Geração de vídeo</h3><p>Clipes em movimento que partem de uma ideia ou de uma imagem.</p><p class="meta"><span class="ok">Disponível</span><span>Mídia</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 20v8M14 14v20M20 18v12M26 10v28M32 16v16M38 21v6"/></svg></span><div><h3>Voz</h3><p>Fala natural em árabe e uma cópia da sua própria voz, com a sua permissão.</p><p class="meta"><span class="ok">Disponível</span><span>Voz</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M19 34V11l20-4v23"/><circle cx="14" cy="34" r="5"/><circle cx="34" cy="30" r="5"/></svg></span><div><h3>Música</h3><p>Peças compostas para o que você cria.</p><p class="meta"><span class="ok">Disponível</span><span>Voz</span></p></div></li>
+    <li class="cap rv"><span class="th" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 15h20a9 9 0 0 1 8.7 11.2l-1.6 6.3a4.6 4.6 0 0 1-7.8 2L29 30H19l-4.3 4.5a4.6 4.6 0 0 1-7.8-2l-1.6-6.3A9 9 0 0 1 14 15z"/><path d="M15 21v6M12 24h6"/><circle cx="33" cy="22" r="1.2"/><circle cx="36" cy="26" r="1.2"/></svg></span><div><h3>Criação profissional de jogos</h3><p>De uma ideia a um jogo jogável: o mundo, os personagens, os movimentos e o som.</p><p class="meta"><span class="ok">Disponível</span><a class="lat" href="../game/index.html">NightDistrict</a></p></div></li>
+  </ul>
+</section>
+
+<section class="sec wrap" id="for" aria-labelledby="for-h">
+  <div class="sh rv"><h2 id="for-h"><span class="lat">OPTES</span> para cada profissão</h2><a class="link" href="for/index.html">Todas as profissões</a></div>
+  <p class="for-lead rv">Um assistente de IA que conhece o seu trabalho: de programadores e designers a professores, contadores e donos de loja. Escolha sua profissão e veja o que ele faz por você, com exemplos do seu dia a dia.</p>
+  <div class="pills rv"><a href="for/programmers/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>Programadores</a><a href="for/designers/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 7l3 3"/></svg>Designers</a><a href="for/content-creators/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>Criadores de conteúdo e vídeo</a><a href="for/students/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.5V16c1.5 1.5 3.5 2.2 5.5 2.2s4-.7 5.5-2.2v-4.5M21.5 9.5V15"/></svg>Estudantes</a><a href="for/teachers/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20l2-4M16 20l-2-4M7 8h6M7 11h9"/></svg>Professores</a><a href="for/marketers/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4h3l7 4V6L6 10z"/><path d="M17 9a4 4 0 0 1 0 6M6 14l1.5 5h2.5l-1-4.5"/></svg>Profissionais de marketing</a><a href="for/entrepreneurs/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15l-3-3c1.5-5 4.5-8 10-9-1 5.5-4 8.5-9 10z"/><path d="M9 12l-4 .5-2 3 4-.5M12 15l-.5 4-3 2 .5-4"/><circle cx="15" cy="9" r="1.3"/></svg>Empreendedores</a><a href="for/ecommerce/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.5l2 11h11l2-8H7"/><circle cx="9.5" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>Donos de lojas virtuais</a><a href="for/researchers/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.5 9.5A1.8 1.8 0 0 0 6 21h12a1.8 1.8 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>Pesquisadores</a><a href="for/translators/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h9M7.5 3v2M5 5c.5 3 2.5 5.5 5.5 7M10 5c-.5 3-2.5 5.5-6 7"/><path d="M12.5 21l4-9 4 9M14 18h5"/></svg>Tradutores</a><a href="for/game-developers/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 3.9 4.9l-.8 3.2a2.2 2.2 0 0 1-3.8 1L14.5 15h-5l-1.8 2.1a2.2 2.2 0 0 1-3.8-1l-.8-3.2A4 4 0 0 1 7 8z"/><path d="M8 11v3M6.5 12.5h3"/><circle cx="16" cy="12" r=".6"/></svg>Desenvolvedores de jogos</a><a href="for/accountants/index.html"><svg class="pi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15h.01M12 15h.01M15.5 15h.01M8.5 18h.01M12 18h3.5"/></svg>Contadores</a><a class="all" href="for/index.html">Todas as profissões (30)</a></div>
+</section>
+
+<section class="sec wrap" id="face" aria-labelledby="face-h">
+  <div class="facecard rv">
+    <div class="facetext">
+      <p class="eyebrow">O rosto</p>
+      <h2 id="face-h">Um rosto de luz</h2>
+      <p>Tudo o que o <span class="lat">OPTES</span> faz vem com um rosto. Cada dígito nele tira seu brilho de uma fotografia original, exatamente do seu lugar nela; os olhos e a boca não são desenhados, eles aparecem onde estão no original.</p>
+      <p>O rosto se desfaz em partículas de luz, se reúne em uma figura completa e depois volta. Passe a mão sobre ele, e ele vai abrir caminho.</p>
+      <p class="note">A cena é desenhada agora mesmo no seu navegador a partir de duas fotografias, sem nenhum traço feito à mão.</p>
+    </div>
+    <div class="facestage" id="faceStage" role="img" aria-label="O rosto do OPTES desenhado em dígitos luminosos, se desfazendo e se reunindo em uma figura completa"><canvas></canvas></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="compare" aria-labelledby="cmp-h">
+  <div class="center rv">
+    <p class="eyebrow">Comparação</p>
+    <h2 id="cmp-h">O que aqui está junto, em outros lugares está espalhado</h2>
+    <p class="lead">Não comparamos com nomes, mas com categorias que qualquer pessoa que usa ferramentas de IA hoje vai reconhecer. A pergunta é simples: o que você encontra em um só lugar?</p>
+  </div>
+  <div class="cmp rv" role="table" aria-label="OPTES 1.2 comparado com categorias de ferramentas">
+    <div class="cmp-row cmp-head" role="row"><span role="columnheader">Recurso</span><span role="columnheader" class="us"><span class="lat">OPTES 1.2</span></span><span role="columnheader">Assistente de chat típico</span><span role="columnheader">Ferramenta de programação típica</span><span role="columnheader">Plataformas de geração de mídia</span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">No seu idioma, com o árabe da direita para a esquerda incluído</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Chat</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Pré-visualização ao vivo em molduras de dispositivos e um botão “Corrigir”</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Chat</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Controle do computador após a sua aprovação</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Chat</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Uma equipe de agentes dividindo a tarefa</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Chat</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Proteção de comandos e um modo de aprovações que você escolhe</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Chat</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Um limite de gastos que interrompe os gastos quando é atingido</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Chat</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Programação</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Tudo isso em um único app</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Chat</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+    <div class="cmp-row" role="row"><span class="f" role="cell">Publicação com um clique</span><span class="m us" role="cell"><span class="mk y" role="img" aria-label="Disponível"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8.5 3.2 3L13 4.5"/></svg></span><small>OPTES</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Chat</small></span><span class="m" role="cell"><span class="mk p">Em parte</span><small>Programação</small></span><span class="m" role="cell"><span class="mk" role="img" aria-label="Geralmente não">—</span><small>Mídia</small></span></div>
+  </div>
+  <p class="cmp-note">Uma comparação geral entre categorias, como costumam ser oferecidas, e não entre produtos específicos; uma plataforma pode ser diferente de outra dentro da mesma categoria.</p>
+</section>
+
+<section class="sec wrap" id="safety" aria-labelledby="safe-h">
+  <div class="center rv">
+    <p class="eyebrow">Segurança</p>
+    <h2 id="safe-h">Quanto mais ele pode fazer, mais a decisão continua sendo sua</h2>
+    <p class="lead">Tudo o que puder afetar seus arquivos, seu computador ou seus gastos passa por você, conforme o modo de aprovações que você escolher, e tudo o que ele fez fica registrado diante dos seus olhos.</p>
+  </div>
+  <div class="trio">
+    <div class="scard rv"><h3>Modo de aprovações</h3><div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="6"/><path d="m16 24 6 6 11-12"/></svg><p style="margin-top:20px">Você escolhe o que precisa da sua permissão explícita, quando uma espera expira e quais comandos podem ser executados.</p></div></div>
+    <div class="scard rv"><h3>Proteção de comandos</h3><div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M24 5 8 11v11c0 10 7 18 16 21 9-3 16-11 16-21V11z"/><path d="M18 24h12"/></svg><p style="margin-top:20px">Ela verifica cada comando antes de ele ser executado e bloqueia os destrutivos. Os segredos ficam ocultos do agente, e pontos de restauração mantêm seus arquivos seguros.</p></div></div>
+    <div class="scard rv"><h3>Limite de gastos</h3><div><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 24 33 15M24 11v3M37 24h-3M11 24h3"/></svg><p style="margin-top:20px">Você define um limite, e o trabalho pago para ali e nunca o ultrapassa sem a sua aprovação.</p></div></div>
+  </div>
+  <p class="after rv"><a class="link" href="../security/index.html" hreflang="ar">Relatar uma vulnerabilidade de segurança</a></p>
+</section>
+
+<section class="sec wrap" id="company" aria-labelledby="co-h">
+  <div class="company">
+    <div class="rv"><p class="eyebrow" id="co-h">Empresa</p><p class="big" style="margin-top:14px">IA que não para na resposta. Ela termina o trabalho.</p></div>
+    <div class="prose rv">
+      <p><strong>O <span class="lat">OPTES 1.2</span> é a versão mais recente do <span class="lat">OPTES</span>,</strong> criado com um único propósito: levar o que você pede até o fim. Você descreve o que quer, e ele planeja, escreve, executa e testa, depois mostra o resultado funcionando diante de você.</p>
+      <p>Não o criamos para impressionar você com a primeira resposta, mas para que você possa confiar nele no décimo passo.</p>
+      <p><strong>Árabe desde a primeira letra, aberto a todos.</strong> A interface começa pela direita, e ele responde no idioma em que você escreve: inglês, árabe padrão moderno ou o seu próprio dialeto. O código continua na sua própria linguagem.</p>
+      <p class="don-line">O OPTES é um projeto independente que cresce com o seu apoio. <a href="donate/index.html">Apoie o OPTES</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="faq" aria-labelledby="faq-h">
+  <div class="center rv"><p class="eyebrow">Perguntas frequentes</p><h2 id="faq-h">Perguntas sobre o <span class="lat">OPTES</span></h2></div>
+  <div class="faq faq-home rv">
+    <details open><summary>O que é o OPTES?</summary><div class="a"><p>O OPTES (escrito أوبتس, اوبتس ou اوبتيس em árabe) é uma plataforma de IA que trabalha no seu idioma. É um agente de IA que não para na resposta, mas termina o trabalho: programa projetos inteiros e mostra a pré-visualização deles rodando, controla seu computador depois da sua aprovação, gera imagens, vídeo, fala e música, e cria jogos.</p></div></details>
+    <details><summary>Em quais sistemas o app OPTES CODE funciona e como faço para obtê-lo?</summary><div class="a"><p>Ele funciona no Windows 10 e 11, 64 bits, e o instalador tem cerca de 285 MB. O link de download está no <a href="index.html#launch">cartão de download</a>, no topo desta página.</p></div></details>
+    <details><summary>O OPTES é só um assistente de programação?</summary><div class="a"><p>Não. A programação é uma parte: ele lê a estrutura de um projeto, escreve, testa e revisa o que alterou. Junto com isso vêm a pré-visualização ao vivo, uma equipe de agentes para tarefas longas, voz para texto, geração de imagens e vídeos, voz e música.</p></div></details>
+    <details><summary>Ele entende árabe e seus dialetos?</summary><div class="a"><p>Sim. A interface começa pela direita, e ele responde no idioma em que você escreve: inglês, árabe padrão moderno ou o seu próprio dialeto. O código continua na sua própria linguagem.</p></div></details>
+    <details><summary>Ele vai fazer alguma coisa no meu computador sem a minha permissão?</summary><div class="a"><p>Tudo o que puder afetar seus arquivos, seu computador ou seus gastos passa por você, conforme o modo de aprovações que você escolher. A proteção de comandos bloqueia comandos destrutivos, os pontos de restauração mantêm seus arquivos seguros e o limite de gastos interrompe o trabalho pago no valor que você definiu.</p></div></details>
+    <details><summary>O OPTES tem uma API de IA para desenvolvedores?</summary><div class="a"><p>Sim. A <a href="../en/developers/index.html">plataforma para desenvolvedores</a> oferece uma única API e uma única chave para doze modelos OPTES, que cobrem texto, código, visão, imagens, vídeo, fala, música e busca.</p></div></details>
+    <details><summary>Para quem é o OPTES?</summary><div class="a"><p>Para qualquer pessoa que trabalha no computador: programadores, designers, criadores de conteúdo, estudantes, professores, fundadores e muitos outros. As páginas <a href="../en/for/index.html">Para cada profissão</a> mostram o que ele faz especificamente no seu trabalho.</p></div></details>
+    <details><summary>Como entro em contato com vocês ou relato uma vulnerabilidade de segurança?</summary><div class="a"><p>Envie um e-mail para <a href="mailto:support@optes3.com">support@optes3.com</a>. Para detalhes sobre divulgação responsável, consulte a <a href="../security/index.html" hreflang="ar">página de segurança</a>.</p></div></details>
+  </div>
+</section>
+
+<section class="sec wrap" aria-labelledby="end-h">
+  <div class="closing rv">
+    <h2 id="end-h">O que antes exigia uma equipe e semanas agora começa com uma frase.</h2>
+    <p class="live" data-live>O <span class="lat">OPTES 1.2</span> já está disponível.</p>
+    <div class="row"><a class="btn light" href="index.html#launch">Experimente o <span class="lat">OPTES</span></a><a class="btn" href="../galaxy/index.html" hreflang="ar">Entrar na galáxia</a></div>
+  </div>
+</section>
+</main>
+
+<section class="oxh" data-oxh aria-label="OPTES Cloud"><div class="wrap"><div class="oxh-in"><div><p class="oxh-e">OPTES Cloud</p><h2>Servidores VPS e GPUs em uma só conta OPTES</h2><p class="oxh-l">Servidores protegidos desde o primeiro minuto, GPUs cobradas por segundo e endpoints serverless. Os pedidos abrem em breve.</p></div><a class="oxh-b" href="cloud/index.html">Conhecer o OPTES Cloud</a></div></div></section>
+<footer class="sf"><div class="wrap">
+  <div class="sf-cols">
+    <div><h4>Pesquisa</h4><ul><li><a href="../galaxy/index.html" hreflang="ar">A Via Láctea</a></li><li><a href="../galaxy/index.html#hero-bh" hreflang="ar">O buraco negro</a></li><li><a href="index.html#face">Um rosto de luz</a></li></ul></div><div><h4>Produtos</h4><ul><li><a href="index.html#capabilities">Recursos do OPTES 1.2</a></li><li><a href="../game/index.html" hreflang="ar">Criação de jogos</a></li><li><a href="for/index.html">Para cada profissão</a></li><li><a href="index.html#compare">Comparação</a></li><li><a href="plans/index.html">Planos</a></li><li><a href="index.html#launch">Baixar</a></li></ul></div><div><h4>Desenvolvedores</h4><ul><li><a href="../en/developers/index.html">Visão geral</a></li><li><a href="../en/developers/index.html#code">Documentação</a></li><li><a href="../en/developers/index.html#code">Referência da API</a></li><li><a href="../en/developers/index.html#models">Preços</a></li><li><a href="https://accounts.optes3.com/account/api?view=keys&lang=pt">Chaves de API</a></li></ul></div><div><h4>Segurança</h4><ul><li><a href="index.html#safety">Nossa abordagem</a></li><li><a href="security/index.html">Relatar uma vulnerabilidade</a></li><li><a href="privacy/index.html">Privacidade</a></li><li><a href="terms/index.html">Termos de Uso</a></li><li><a href="delete-account/index.html">Excluir conta</a></li><li><a href="../.well-known/security.txt">security.txt</a></li></ul></div><div><h4>Empresa</h4><ul><li><a href="../en/about/index.html">Sobre o OPTES</a></li><li><a href="donate/index.html">Apoie o OPTES</a></li><li><a href="index.html#faq">Perguntas frequentes</a></li><li><a href="mailto:support@optes3.com">Fale conosco</a></li></ul></div>
+  </div>
+  <div class="sf-base">
+    <div class="who"><span class="lat">© 2026 OPTES</span><span>Mapa da galáxia: <span class="lat">NASA/JPL-Caltech/R. Hurt</span></span></div>
+    <nav class="sf-langs" aria-label="Escolha um idioma"><a href="../index.html" hreflang="ar" lang="ar">العربية</a><a href="../en/index.html" hreflang="en" lang="en">English</a><a href="../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../es/index.html" hreflang="es" lang="es">Español</a><a href="../de/index.html" hreflang="de" lang="de">Deutsch</a><a href="../it/index.html" hreflang="it" lang="it">Italiano</a><a href="index.html" hreflang="pt" lang="pt" aria-current="true">Português</a><a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../fa/index.html" hreflang="fa" lang="fa">فارسی</a><a href="../ur/index.html" hreflang="ur" lang="ur">اردو</a><a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../zh/index.html" hreflang="zh-Hans" lang="zh">中文</a><a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../ko/index.html" hreflang="ko" lang="ko">한국어</a></nav>
+  </div>
+</div></footer>
+
+<script src="../assets/site.js%3Fv=20261015r1602" defer></script>
+<script src="../assets/home.js%3Fv=20261006a" defer></script>
+<script src="../assets/motion.js%3Fv=20261107v2h" defer></script><script src="../assets/liquid.js%3Fv=20261107lq5" defer></script><script src="../assets/liquid-v2.js%3Fv=20261107v2h" defer></script><script src="../assets/dl.js%3Fv=95d460fcf3" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5f3274f2c4507b9',t:'MTc5NTQ2ODE1Mg=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5f3274f2c4507b9',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

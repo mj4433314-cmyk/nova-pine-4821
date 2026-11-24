@@ -1,0 +1,5 @@
+Contact: mailto:support@optes3.com
+Expires: 2027-09-28T00:00:00.000Z
+Preferred-Languages: ar, en
+Canonical: https://optes3.com/.well-known/security.txt
+Policy: https://optes3.com/security/

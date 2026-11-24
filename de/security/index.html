@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de" dir="ltr" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Sicherheitslücke melden · OPTES</title>
+<meta name="description" content="So meldest du eine Sicherheitslücke in Website, App oder API von OPTES verantwortungsvoll: was wir in deiner Nachricht brauchen, wozu wir uns verpflichten, und die Regeln für Tests und Veröffentlichung.">
+<link rel="canonical" href="index.html">
+<link rel="alternate" hreflang="ar" href="../../security/index.html">
+<link rel="alternate" hreflang="en" href="../../en/security/index.html">
+<link rel="alternate" hreflang="fr" href="../../fr/security/index.html">
+<link rel="alternate" hreflang="es" href="../../es/security/index.html">
+<link rel="alternate" hreflang="de" href="index.html">
+<link rel="alternate" hreflang="it" href="../../it/security/index.html">
+<link rel="alternate" hreflang="pt" href="../../pt/security/index.html">
+<link rel="alternate" hreflang="tr" href="../../tr/security/index.html">
+<link rel="alternate" hreflang="ru" href="../../ru/security/index.html">
+<link rel="alternate" hreflang="fa" href="../../fa/security/index.html">
+<link rel="alternate" hreflang="ur" href="../../ur/security/index.html">
+<link rel="alternate" hreflang="hi" href="../../hi/security/index.html">
+<link rel="alternate" hreflang="id" href="../../id/security/index.html">
+<link rel="alternate" hreflang="zh-Hans" href="../../zh/security/index.html">
+<link rel="alternate" hreflang="ja" href="../../ja/security/index.html">
+<link rel="alternate" hreflang="ko" href="../../ko/security/index.html">
+<link rel="alternate" hreflang="x-default" href="../../en/security/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OPTES">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Sicherheitslücke melden · OPTES">
+<meta property="og:description" content="So meldest du eine Sicherheitslücke in Website, App oder API von OPTES verantwortungsvoll: was wir in deiner Nachricht brauchen, wozu wir uns verpflichten, und die Regeln für Tests und Veröffentlichung.">
+<meta property="og:url" content="https://optes3.com/de/security/">
+<meta property="og:image" content="https://optes3.com/assets/og/og-de.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Das OPTES-Logo und der Satz: KI, die nicht bei der Antwort stehen bleibt, sondern die Arbeit erledigt">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+
+
+<link rel="stylesheet" href="../../assets/optes-tokens.css%3Fv=325d9c0a62.css" data-ux>
+<link rel="stylesheet" href="../../assets/fonts/f4.css%3Fv=20261107.css">
+<link rel="stylesheet" href="../../assets/site.css%3Fv=20261015r1602.css">
+<style>:root{--ar:"Manrope","Segoe UI","Helvetica Neue",Arial,sans-serif}</style>
+<style>
+.phead{padding-block:clamp(64px,9vw,128px) 0;text-align:center;max-width:760px;margin-inline:auto}
+.phead h1{margin-top:12px;font:500 clamp(36px,5vw,64px)/1.15 var(--ar)}
+.phead .lead{margin-top:20px;color:var(--ink2);font-size:17px}
+.phead .row{margin-top:32px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:1080px;margin:clamp(56px,7vw,96px) auto 0}
+.c{min-height:260px;padding:28px;border-radius:var(--r);border:1px solid var(--rule);background:var(--s1);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.c h2{font:500 20px/1.4 var(--ar)}
+.c p{color:var(--ink2);font-size:15px}
+.c .n{font:300 14px/1 var(--lat);color:var(--ink3);direction:ltr;text-align:end}
+.note{max-width:1080px;margin:24px auto 0;font-size:14px;color:var(--ink3);text-align:center}
+.note a{color:var(--ink);border-bottom:1px solid var(--rule2)}
+@media (max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}.c{min-height:0}}
+@media (max-width:600px){.phead,.note{text-align:start}.phead .row{justify-content:flex-start}.phead .row .btn{flex:1;white-space:normal;text-align:center;padding-block:10px}}
+</style>
+<link rel="stylesheet" href="../../assets/redesign.css%3Fv=20261013a.css">
+<link rel="stylesheet" href="../../assets/sections.css%3Fv=20261013b.css">
+<link rel="stylesheet" href="../../assets/liquid.css%3Fv=20261107v2h.css">
+<link rel="stylesheet" href="../../assets/vqa.css%3Fv=213d7658f3.css">
+<link rel="stylesheet" href="../../assets/ux-bind.css%3Fv=bdd71f35fb.css" data-ux>
+</head>
+<body>
+<a class="skip" href="index.html#main">Zum Inhalt springen</a>
+<header class="sn"><div class="wrap in">
+  <a class="sn-logo" href="../index.html" aria-label="OPTES Startseite">OPTES</a>
+  <nav aria-label="Bereiche"><ul class="sn-links"><li><a href="../plans/index.html">Tarife</a></li>
+    <li><a href="../cloud/index.html" data-oxnav>OPTES Cloud</a></li>
+    <li><a href="../index.html#research">Forschung</a></li>
+    <li><a href="../index.html#products">Produkte</a></li>
+    <li><a href="../../en/developers/index.html">Entwickler</a></li>
+    <li><a href="../index.html#safety">Sicherheit</a></li>
+    <li><a href="../../en/about/index.html">Unternehmen</a></li>
+  </ul></nav>
+  <details class="sn-lang" data-lang-menu><summary aria-label="Sprache wählen: Deutsch"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M1.8 8h12.4M8 1.8c1.8 1.9 2.6 3.9 2.6 6.2S9.8 12.3 8 14.2M8 1.8C6.2 3.7 5.4 5.7 5.4 8s.8 4.3 2.6 6.2"/></svg><span class="ln">Deutsch</span><span class="lc">DE</span></summary><ul class="sn-langs"><li><a href="../../security/index.html" hreflang="ar" lang="ar">العربية</a></li><li><a href="../../en/security/index.html" hreflang="en" lang="en">English</a></li><li><a href="../../fr/security/index.html" hreflang="fr" lang="fr">Français</a></li><li><a href="../../es/security/index.html" hreflang="es" lang="es">Español</a></li><li><a href="index.html" hreflang="de" lang="de" aria-current="true">Deutsch</a></li><li><a href="../../it/security/index.html" hreflang="it" lang="it">Italiano</a></li><li><a href="../../pt/security/index.html" hreflang="pt" lang="pt">Português</a></li><li><a href="../../tr/security/index.html" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../../ru/security/index.html" hreflang="ru" lang="ru">Русский</a></li><li><a href="../../fa/security/index.html" hreflang="fa" lang="fa">فارسی</a></li><li><a href="../../ur/security/index.html" hreflang="ur" lang="ur">اردو</a></li><li><a href="../../hi/security/index.html" hreflang="hi" lang="hi">हिन्दी</a></li><li><a href="../../id/security/index.html" hreflang="id" lang="id">Bahasa Indonesia</a></li><li><a href="../../zh/security/index.html" hreflang="zh-Hans" lang="zh">中文</a></li><li><a href="../../ja/security/index.html" hreflang="ja" lang="ja">日本語</a></li><li><a href="../../ko/security/index.html" hreflang="ko" lang="ko">한국어</a></li></ul></details>
+  <div class="sn-end">
+    <a class="btn sm" href="../index.html#launch">Herunterladen</a>
+    <a class="btn sm light" href="https://web.optes3.com/app/" rel="noopener">Anmelden</a>
+  </div>
+  <button type="button" class="sn-menu-btn" aria-expanded="false" aria-controls="sn-menu" aria-label="Menü" data-l-open="Menü" data-l-close="Menü schließen"><i></i><i></i></button>
+</div></header>
+<div class="sn-menu" id="sn-menu" aria-hidden="true">
+  <nav aria-label="Menü"><a href="../plans/index.html">Tarife</a>
+    <a href="../cloud/index.html" data-oxnav>OPTES Cloud</a>
+    <a href="../index.html#research">Forschung</a>
+    <a href="../index.html#products">Produkte</a>
+    <a href="../../en/developers/index.html">Entwickler</a>
+    <a href="../index.html#safety">Sicherheit</a>
+    <a href="../../en/about/index.html">Unternehmen</a>
+  </nav>
+  <div class="acts">
+    <a class="btn light" href="https://web.optes3.com/app/" rel="noopener">Anmelden</a>
+    <a class="btn" href="../index.html#launch">Herunterladen</a>
+  </div>
+</div>
+
+<main id="main">
+<section class="wrap">
+  <div class="phead">
+    <p class="eyebrow">Sicherheit</p>
+    <h1>Sicherheitslücke melden</h1>
+    <p class="lead">Wenn du eine Sicherheitslücke in <span class="lat">optes3.com</span>, der <span class="lat">OPTES</span>-App oder ihrer API findest, sag es uns vor allen anderen. Wir danken allen, die verantwortungsvoll melden.</p>
+    <div class="row"><a class="btn light" href="mailto:support@optes3.com">Schreib uns an <span class="lat">support@optes3.com</span></a></div>
+  </div>
+  <div class="grid">
+    <div class="c rv"><h2>Was wir in deiner Nachricht brauchen</h2><p>Den betroffenen Link oder die Komponente, die Schritte zum Nachstellen, die erwartete Auswirkung und jeden Screenshot oder Request, der es zeigt. Beginne den Betreff mit dem Wort „Vulnerability“.</p></div>
+    <div class="c rv"><h2>Wozu wir uns verpflichten</h2><p>Wir bestätigen den Eingang deiner Nachricht, antworten möglichst innerhalb von fünf Werktagen und sagen dir, wenn das Gemeldete behoben ist. Wer sich in gutem Glauben an die Regeln unten hält, wird von uns nicht verfolgt.</p></div>
+    <div class="c rv"><h2>Regeln für Tests</h2><p>Greif nicht auf Daten anderer zu und ändere sie nicht, stör den Dienst nicht und überflute ihn nicht mit Anfragen, und nutze weder Social Engineering noch physischen Zugang. Teste nur mit deinem eigenen Konto.</p></div>
+    <div class="c rv"><h2>Veröffentlichung</h2><p>Gib uns 90 Tage oder bis der Fehler behoben ist, bevor du Details veröffentlichst. Auf Wunsch nennen wir dich in unserem Dank.</p></div>
+  </div>
+  <p class="note">Die Datei <a href="../../.well-known/security.txt"><span class="lat">security.txt</span></a> enthält denselben Kontakt für die Werkzeuge von Forschenden. Ein veröffentlichtes Bug-Bounty-Programm haben wir derzeit nicht.</p>
+</section>
+</main>
+
+<footer class="sf"><div class="wrap">
+  <div class="sf-cols">
+    <div><h4>Forschung</h4><ul><li><a href="../../galaxy/index.html" hreflang="ar">Die Milchstraße</a></li><li><a href="../../galaxy/index.html#hero-bh" hreflang="ar">Das Schwarze Loch</a></li><li><a href="../index.html#face">Ein Gesicht aus Licht</a></li></ul></div><div><h4>Produkte</h4><ul><li><a href="../index.html#capabilities">Funktionen von OPTES 1.2</a></li><li><a href="../../game/index.html" hreflang="ar">Spieleentwicklung</a></li><li><a href="../for/index.html">Für jeden Beruf</a></li><li><a href="../index.html#compare">Vergleich</a></li><li><a href="../plans/index.html">Tarife</a></li><li><a href="../index.html#launch">Herunterladen</a></li></ul></div><div><h4>Entwickler</h4><ul><li><a href="../../en/developers/index.html">Überblick</a></li><li><a href="../../en/developers/index.html#code">Dokumentation</a></li><li><a href="../../en/developers/index.html#code">API-Referenz</a></li><li><a href="../../en/developers/index.html#models">Preise</a></li><li><a href="https://accounts.optes3.com/account/api?view=keys&lang=de">API-Schlüssel</a></li></ul></div><div><h4>Sicherheit</h4><ul><li><a href="../index.html#safety">Unser Ansatz</a></li><li><a href="index.html">Sicherheitslücke melden</a></li><li><a href="../privacy/index.html">Datenschutz</a></li><li><a href="../terms/index.html">Nutzungsbedingungen</a></li><li><a href="../delete-account/index.html">Konto löschen</a></li><li><a href="../../.well-known/security.txt">security.txt</a></li></ul></div><div><h4>Unternehmen</h4><ul><li><a href="../../en/about/index.html">Über OPTES</a></li><li><a href="../donate/index.html">OPTES unterstützen</a></li><li><a href="../index.html#faq">Häufige Fragen</a></li><li><a href="mailto:support@optes3.com">Kontakt</a></li></ul></div>
+  </div>
+  <div class="sf-base">
+    <div class="who"><span class="lat">© 2026 OPTES</span><span>Galaxienkarte: <span class="lat">NASA/JPL-Caltech/R. Hurt</span></span></div>
+    <nav class="sf-langs" aria-label="Sprache wählen"><a href="../../index.html" hreflang="ar" lang="ar">العربية</a><a href="../../en/index.html" hreflang="en" lang="en">English</a><a href="../../fr/index.html" hreflang="fr" lang="fr">Français</a><a href="../../es/index.html" hreflang="es" lang="es">Español</a><a href="../index.html" hreflang="de" lang="de" aria-current="true">Deutsch</a><a href="../../it/index.html" hreflang="it" lang="it">Italiano</a><a href="../../pt/index.html" hreflang="pt" lang="pt">Português</a><a href="../../tr/index.html" hreflang="tr" lang="tr">Türkçe</a><a href="../../ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="../../fa/index.html" hreflang="fa" lang="fa">فارسی</a><a href="../../ur/index.html" hreflang="ur" lang="ur">اردو</a><a href="../../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a><a href="../../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="../../zh/index.html" hreflang="zh-Hans" lang="zh">中文</a><a href="../../ja/index.html" hreflang="ja" lang="ja">日本語</a><a href="../../ko/index.html" hreflang="ko" lang="ko">한국어</a></nav>
+  </div>
+</div></footer>
+
+<script src="../../assets/site.js%3Fv=20261015r1602" defer></script>
+<script src="../../assets/motion.js%3Fv=20261107v2h" defer></script><script src="../../assets/liquid.js%3Fv=20261107lq5" defer></script><script src="../../assets/liquid-v2.js%3Fv=20261107v2h" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5f3300deed707b9',t:'MTc5NTQ2ODUxMA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5f3300deed707b9',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
